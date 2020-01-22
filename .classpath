@@ -13,5 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/johan/eclipse-workspace/40-Demo10.1Voiture_Hibernate/WebContent/WEB-INF/lib/hibernate-core-6.0.0.Alpha4.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

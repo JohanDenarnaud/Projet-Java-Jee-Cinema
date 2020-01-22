@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dao" class="dal.FilmDAOJdbcImpl" />
+	
+	<bean id="fm" class="bll.FilmManager" >
+		<property name="dao" ref="dao"></property>
+	</bean>
+	
+	<bean id="daoU" class="dal.UtilisateurDAOJdbcImpl" />
+	
+	<bean id="um" class="bll.UtilisateurManager" >
+		<property name="dao" ref="daoU"></property>
+	</bean>
+	
+	<bean id="daoR" class="dal.ReservationDAOJdbcImpl" />
+	
+	<bean id="rm" class="bll.ReservationManager" >
+		<property name="dao" ref="daoR"></property>
+	</bean>
+
+</beans>
