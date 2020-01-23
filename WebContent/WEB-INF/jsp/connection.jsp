@@ -6,21 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
- <style>
+<link href="style.css" rel="stylesheet" type="text/css"> 
 
-*{
-
-    font-family : 'Roboto', sans-serif;
-     font-size : 20px ;
-     
-			}
-h1{
-	font-size:30px;
-	margin:20px;
-	
-}
-
-</style>
 <title>Connection</title>
 </head>
 <body>
@@ -32,8 +19,8 @@ h1{
 </c:if>	
 	<h1>Connection</h1>
 	
-	<div style="border:solid;width:80%;height:200px;margin-left:auto;margin-right:auto;padding:20px; ">
-	<form style="margin-left:auto; margin-right:auto;width: 100%;" method="post" action="${pageContext.request.contextPath }/ServletConnexion">
+	<div class = "connection" >
+	<form method="post" action="${pageContext.request.contextPath }/ServletConnexion">
 		<p>Identifiant : <input type="text" name="identifiant" placeholder="identifiant"/></p>
 		<p>Mot de passe : <input type="password" name="motDePasse" placeholder="******"/></p>
 		<input  type="submit" value="Connection">

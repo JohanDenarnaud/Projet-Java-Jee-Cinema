@@ -6,20 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
-<style>
-
- *{
-
-    font-family : 'Roboto', sans-serif;
-     font-size : 20px ;
-     
-			}
-h1{
-	font-size:30px;
-	margin:20px;
-}
-</style>
-<title>Insert title here</title>
+<link href="style.css" rel="stylesheet" type="text/css"> 
+<title>Détail du film</title>
 </head>
 <body>
 
@@ -41,7 +29,7 @@ h1{
 	<h2>Séances</h2>
 	
 	
-	<table border="1">
+	<table class= tabDetailFilm border="1">
 	
 		<tr>
 				<th>Séance</th>

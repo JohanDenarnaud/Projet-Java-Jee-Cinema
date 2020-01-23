@@ -6,20 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
- <style>
-
- *{
-
-    font-family : 'Roboto', sans-serif;
-     font-size : 20px ;
-     
-			}
-h1{
-	font-size:30px;
-	margin:20px;
-	
-}
-</style>
+<link href="style.css" rel="stylesheet" type="text/css"> 
+ 
 
 <title>ajouter un film</title>
 </head>
@@ -38,7 +26,7 @@ h1{
 <form method="post" action="${pageContext.request.contextPath }/ServletAjouterFilm">
 
 	<input type="text" name="titre" placeholder="Titre"><br><br>
-	<textarea type="text" name="description" rows="6" cols="30" placeholder="Description"></textarea><br><br>
+	<textarea name="description" rows="6" cols="30" placeholder="Description"></textarea><br><br>
 	<input type="text" name="dateSortie" placeholder="Date de sortie"><br><br>
 	<input type="number" name="duree" placeholder="Durée"><br><br>
 	<input type="text" name="affiche" placeholder="affiche"><br><br>
@@ -48,8 +36,8 @@ h1{
 
 <h2>Modifier / Supprimer un film</h2>
 
-<table style ="border: solid; border-color:grey;">
-	<tr style="border:solid; border-color:grey;">
+<table>
+	<tr>
 		<th>id</th>
 		<th>Titre</th>
 		<th>Date de sortie</th>

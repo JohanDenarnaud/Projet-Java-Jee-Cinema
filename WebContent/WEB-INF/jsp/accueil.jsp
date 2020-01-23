@@ -5,36 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
- <style>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet" type="text/css"> 
 
- *{
 
-    font-family : 'Roboto', sans-serif;
-     font-size : 20px ;
-     
-			}
-h1{
-	font-size:30px;
-	margin:20px;
-	
-}
-
-.film:hover{
-	/* background-color : #e5e0df; */
-	opacity: 60%;
-}
-
-img{
-	width: 100px;
-	height: 150px;
-	float: left;
-	margin-right: 20px;
-
-}
-
-</style>
-<title>Insert title here</title>
+<title>accueil</title>
 </head>
 <body>
 
@@ -48,29 +23,20 @@ img{
 
 
 
-	<h1 style="font-size:30px;margin:20px;">Accueil</h1>
-	
+	<h1>Accueil</h1>
 	
 		<c:forEach var="current" items="${films }">
-			
 			<form method ="get" action= "${ pageContext.request.contextPath }/ServletDetailFilm">
-			 
-				<div onclick="parentElement.submit()" class="film" style="border:solid;width:80%;height:150px;margin:20px;padding:10px;"> 
+
+				<div onclick="parentElement.submit()" class="film"> 
 					
 						<img src="Affiche/${current.affiche }">
 						<input type="hidden" name="id" value="${current.id }">
 						<h3>${current.titre }</h3>
 						<p>${current.description}</p>
 					
-			 	</div> 
-			
-				
+			 	</div> 				
 			</form>
-			
-
 		</c:forEach>
-		
-	
-	
 </body>
 </html>
