@@ -18,17 +18,29 @@
 <c:if test="${empty sessionConnectee }">
 	<jsp:include page="/WEB-INF/jsp/headerNonConnecte.jsp"></jsp:include>
 </c:if>	
+	
+	<div class = "container connection" >
 	<h1>Connection</h1>
 	
-	<div class = "connection" >
-	<form method="post" action="${pageContext.request.contextPath }/ServletConnexion">
-		<p>Identifiant : <input type="text" name="identifiant" placeholder="identifiant"/></p>
-		<p>Mot de passe : <input type="password" name="motDePasse" placeholder="******"/></p>
-		<input  type="submit" value="Connection">
+	
+	<form  method="post" action="${pageContext.request.contextPath }/ServletConnexion">
+		<div class="form-group">
+			<label for="identifiant">Identifiant</label>
+			<input class="form-control" type="text" id="identifiant" name="identifiant" placeholder="identifiant"/>
+		</div>
+		
+		<div class="form-group">
+			<label for="password">Mot de passe</label>
+			<input class="form-control" type="password" id="password" name="motDePasse" placeholder="********"/>
+		</div>
+		
+		<button type="submit" class="btn btn-secondary">M'identifier</button>
+		
 	
 	</form>
 	
 	
 	</div>
+	
 </body>
 </html>

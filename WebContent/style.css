@@ -1,9 +1,6 @@
 @charset "UTF-8";
 
-*{	
-    font-family : 'Roboto', sans-serif;
-    font-size : 20px ;	
-}
+
 
 h1{
 	font-size:30px;
@@ -11,13 +8,7 @@ h1{
 	
 }
 
-.film{
-	border:solid;
-	width:80%;
-	height:150px;
-	margin:20px;
-	padding:10px;
-}
+
 .film:hover{
 	
 	opacity: 60%;
@@ -30,20 +21,7 @@ img{
 	margin-right: 20px;
 }
 
-.connection{
-	border:solid;
-	width:80%;
-	height:200px;
-	margin-left:auto;
-	margin-right:auto;
-	padding:20px;
-}
 
-.connection form{
-	margin-left:auto; 
-	margin-right:auto;
-	width: 100%;
-}
 
 .tabDetailFilm{
 	border:1;

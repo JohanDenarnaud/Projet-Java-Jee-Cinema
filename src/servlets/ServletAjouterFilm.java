@@ -79,7 +79,7 @@ public class ServletAjouterFilm extends HttpServlet {
 
 		fm.insertFilm(film);
 
-		doGet(request, response);
+		response.sendRedirect("ServletAccueil");
 	}
 
 }

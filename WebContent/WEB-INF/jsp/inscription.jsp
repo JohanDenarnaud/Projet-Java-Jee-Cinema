@@ -15,14 +15,31 @@
 <c:if test="${empty sessionConnectee }">
 	<jsp:include page="/WEB-INF/jsp/headerNonConnecte.jsp"></jsp:include>
 </c:if>	
+	<div class="container">
 	<h1>Inscription</h1>
 	
-	<div style="border:solid;width:300px;height:300px;margin:20px;padding:10px;">
+	
 	<form method="post" action="${pageContext.request.contextPath }/ServletInscription">
-		<p>Identifiant : <input type="text" name="identifiant" placeholder="identifiant"/></p>
-		<p>Mot de passe : <input type="password" name="motDePasse" placeholder="******"/></p>
-		<p>Confirmation : <input type="password" name="confirmationMP" placeholder="******"/></p>
-		<input type="submit" value="Inscription">
+		<div class="form-group">
+			<label for="identifiant">Identifiant</label>
+			<input class="form-control" type="text" id="identifiant" name="identifiant" placeholder="identifiant"/>
+		</div>
+		
+		<div class="form-group">
+			<label for="password">Mot de passe</label>
+			<input class="form-control" type="password" id="password" name="motDePasse" placeholder="********"/>
+		</div>
+		
+		<div class="form-group">
+			<label for="confirmPassword">Confirmation du mot de Passe</label>
+			<input class="form-control" type="password" id="confirmPassword" name="confirmationMP" placeholder="********"/>
+		</div>
+		
+		<button type="submit" class="btn btn-secondary">M'enregistrer</button>
+		
+		
+		
+		
 	
 	</form>
 	

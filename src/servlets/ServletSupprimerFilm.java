@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,6 +14,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import bll.FilmManager;
+import bo.Film;
 
 /**
  * Servlet implementation class ServletSupprimerFilm
@@ -37,6 +39,9 @@ public class ServletSupprimerFilm extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		List<Film> films = fm.selectAll();
+
+		request.setAttribute("films", films);
 		RequestDispatcher rd = this.getServletContext().getNamedDispatcher("ajouterFilm");
 		rd.forward(request, response);
 	}
@@ -53,7 +58,7 @@ public class ServletSupprimerFilm extends HttpServlet {
 
 		fm.deleteFilm(idAsInt);
 
-		RequestDispatcher rd = this.getServletContext().getNamedDispatcher("ajouterFilm");
+		RequestDispatcher rd = this.getServletContext().getNamedDispatcher("accueil");
 		rd.forward(request, response);
 	}
 

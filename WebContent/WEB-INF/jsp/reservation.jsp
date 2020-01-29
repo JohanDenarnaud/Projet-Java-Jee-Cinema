@@ -18,13 +18,15 @@
 		<jsp:include page="/WEB-INF/jsp/headerNonConnecte.jsp"></jsp:include>
 	</c:if>	
 	
-	
+	<div class="container">
 	<h1>Mes Réservations</h1>
 	
 	<c:forEach var="reservation" items="${reservations }">
 			
 				<ul>
-						<li>${reservation.nbPlaces } places pour ${reservation.titre }, séance à ${reservation.horaire}</li>
+						<li class="list-group-item list-group-item-light">
+						${reservation.nbPlaces } places pour ${reservation.titre }, séance à ${reservation.horaire}
+						</li>
 						
 				</ul>
 			
@@ -33,6 +35,7 @@
 			
 		</c:forEach>
 	
+	</div>
 	
 
 </body>
