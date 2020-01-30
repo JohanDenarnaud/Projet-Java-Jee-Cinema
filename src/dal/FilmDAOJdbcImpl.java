@@ -23,6 +23,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		session = factory.openSession();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Film> selectAll() {
 

@@ -51,6 +51,7 @@ public class ServletAjouterFilm extends HttpServlet {
 		List<Film> films = fm.selectAll();
 
 		request.setAttribute("films", films);
+
 		RequestDispatcher rd = this.getServletContext().getNamedDispatcher("ajouterFilm");
 		rd.forward(request, response);
 	}
@@ -79,7 +80,7 @@ public class ServletAjouterFilm extends HttpServlet {
 
 		fm.insertFilm(film);
 
-		response.sendRedirect("ServletAccueil");
+		doGet(request, response);
 	}
 
 }

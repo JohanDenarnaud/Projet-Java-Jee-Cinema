@@ -9,23 +9,21 @@
 
 			<div class="collapse navbar-collapse col-10" id="navbarNavDropdown">
 				<ul class="navbar-nav">
-					<li class="nav-item active"><a class="nav-link"
+					<li class="nav-item "><a class="nav-link"
 						href="${pageContext.request.contextPath }/ServletAccueil">Accueil
 							<span class="sr-only">(current)</span>
 					</a></li>
-					<li class="nav-item active"><a class="nav-link"
-						href="${pageContext.request.contextPath }/ServletConnexion">Me connecter</a></li>
-					<li class="nav-item active"><a class="nav-link"
+					<li class="nav-item "><a class="nav-link"
+						href="${pageContext.request.contextPath }/ServletConnexion">Me
+							connecter</a></li>
+					<li class="nav-item "><a class="nav-link"
 						href="${pageContext.request.contextPath }/ServletInscription">M'inscrire</a></li>
-					
+
 				</ul>
 			</div>
 		</nav>
 
 	</div>
-
-
-
 
 
 </header>
