@@ -16,25 +16,29 @@
 </head>
 <body>
 
+
 	<c:if test="${!empty sessionConnectee }">
 		<%@ include file="headerConnecte.jsp"%>
 	</c:if>
 	<c:if test="${empty sessionConnectee }">
 		<jsp:include page="/WEB-INF/jsp/headerNonConnecte.jsp"></jsp:include>
 	</c:if>
-
+	<div class="container">
+		<div class="row">
+		<div class="col-6">
 	<h1>${ film.titre }</h1>
 
 	<p>Description : ${ film.description }</p>
 	<p>Duree : ${ film.duree }</p>
 	<p>Date de sortie : ${ film.dateSortie }</p>
 
-
-
+	
+	</div>
+	<div class="col-6">
 	<h2>Séances</h2>
 
 
-	<table class=tabDetailFilm border="1">
+	<table class="table" >
 
 		<tr>
 			<th>Séance</th>
@@ -65,8 +69,9 @@
 
 
 	</table>
-
-
+	</div>
+	</div>
+	</div>
 
 
 </body>

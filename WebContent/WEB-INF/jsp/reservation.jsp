@@ -28,7 +28,7 @@
 		<c:forEach var="reservation" items="${reservations }">
 
 			<ul>
-				<li class="list-group-item list-group-item-light">
+				<li class="list-group-item">
 					${reservation.nbPlaces } places pour ${reservation.titre }, séance
 					à ${reservation.horaire}</li>
 
